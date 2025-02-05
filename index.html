@@ -42,7 +42,7 @@
       }
 
       .form-group {
-        margin-bottom: 45px;
+        margin-bottom: 15px;
       }
       label {
         display: block;
@@ -72,131 +72,142 @@
         display: none;
         margin-top: 2rem;
       }
+      .results-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
     </style>
   </head>
   <body>
     <div class="container">
-    <img src="https://mindpowermy.github.io/vnca/logo.png" width="150">
-      <h1>VNCA Personality Assessment</h1>
-      <p>
-        Take this quick assessment to find out your dominant personality at work.
-        <br /><br />
-        Simply go through each page of questions where you will compare two
-        characteristics.
-        <br /><br />
-        The scale is from left to right, so slide to where you feel fits you
-        best at work.
-        <br /><br />
-        There are no right or wrong; good or bad answers. Answer with the first instinct that comes to mind.
-      </p>
-
-      <!-- Page 1 -->
+      <!-- Page 1: Introduction only -->
       <div class="page active" id="page1">
-        <h2>Page 1 of 3</h2>
-
-        <!-- Original 4 questions at the front -->
-        <div class="form-group">
-          <label for="question1">Question 1: <strong>Take Charge</strong> vs <strong>Go Along</strong></label>
-          <div class="description"><strong>Take Charge:</strong> Leads and directs group efforts. <br><strong>Go Along:</strong> Adapts to group's direction and flow.</div>
-          <input type="range" id="question1" min="1" max="4" step="1" value="2">
-          <div class="scale-labels">
-            <span>Take Charge</span>
-            <span>Go Along</span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="question2">Question 2: <strong>Dominant</strong> vs <strong>Submissive</strong></label>
-          <div class="description"><strong>Dominant:</strong> Exerts authority to shape outcomes. <br><strong>Submissive:</strong> Complies with requests and avoids control.</div>
-          <input type="range" id="question2" min="1" max="4" step="1" value="2">
-          <div class="scale-labels">
-            <span>Dominant</span>
-            <span>Submissive</span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="question3">Question 3: <strong>Spontaneous</strong> vs <strong>Disciplined</strong></label>
-          <div class="description"><strong>Spontaneous:</strong> Acts on the spur of the moment, flexible. <br><strong>Disciplined:</strong> Maintains structure and self-control.</div>
-          <input type="range" id="question3" min="1" max="4" step="1" value="2">
-          <div class="scale-labels">
-            <span>Spontaneous</span>
-            <span>Disciplined</span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="question4">Question 4: <strong>Playful</strong> vs <strong>Stiff</strong></label>
-          <div class="description"><strong>Playful:</strong> Light-hearted, enjoys humor at work. <br><strong>Stiff:</strong> Prefers formality and seriousness.</div>
-          <input type="range" id="question4" min="1" max="4" step="1" value="2">
-          <div class="scale-labels">
-            <span>Playful</span>
-            <span>Stiff</span>
-          </div>
-        </div>
-
-        <!-- Next 6 from the new list to total 10 on page 1 -->
-        <div class="form-group">
-          <label for="question5">Question 5: <strong>Leader</strong> vs <strong>Follower</strong></label>
-          <div class="description"><strong>Leader:</strong> Takes charge, setting direction and inspiring others. <br><strong>Follower:</strong> Prefers guidance and supports team objectives.</div>
-          <input type="range" id="question5" min="1" max="4" step="1" value="2">
-          <div class="scale-labels">
-            <span>Leader</span>
-            <span>Follower</span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="question6">Question 6: <strong>Assertive</strong> vs <strong>Passive</strong></label>
-          <div class="description"><strong>Assertive:</strong> Stands firm, expresses opinions confidently. <br><strong>Passive:</strong> Prefers avoiding confrontation and defers to others.</div>
-          <input type="range" id="question6" min="1" max="4" step="1" value="2">
-          <div class="scale-labels">
-            <span>Assertive</span>
-            <span>Passive</span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="question7">Question 7: <strong>Matter-of-fact</strong> vs <strong>Dramatic</strong></label>
-          <div class="description"><strong>Matter-of-fact:</strong> Focuses on facts with minimal emotional expression. <br><strong>Dramatic:</strong> Expressive and uses emotions to emphasize points.</div>
-          <input type="range" id="question7" min="1" max="4" step="1" value="2">
-          <div class="scale-labels">
-            <span>Matter-of-fact</span>
-            <span>Dramatic</span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="question8">Question 8: <strong>Methodical</strong> vs <strong>Impulsive</strong></label>
-          <div class="description"><strong>Methodical:</strong> Plans carefully and follows processes. <br><strong>Impulsive:</strong> Prefers spontaneity and rapid decisions.</div>
-          <input type="range" id="question8" min="1" max="4" step="1" value="2">
-          <div class="scale-labels">
-            <span>Methodical</span>
-            <span>Impulsive</span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="question9">Question 9: <strong>Driving</strong> vs <strong>Coasting</strong></label>
-          <div class="description"><strong>Driving:</strong> Pushes for results aggressively. <br><strong>Coasting:</strong> Takes a relaxed approach, content with steady progress.</div>
-          <input type="range" id="question9" min="1" max="4" step="1" value="2">
-          <div class="scale-labels">
-            <span>Driving</span>
-            <span>Coasting</span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="question10">Question 10: <strong>Bold</strong> vs <strong>Hesitant</strong></label>
-          <div class="description"><strong>Bold:</strong> Takes risks and pursues challenging goals. <br><strong>Hesitant:</strong> Prefers caution and thorough consideration.</div>
-          <input type="range" id="question10" min="1" max="4" step="1" value="2">
-          <div class="scale-labels">
-            <span>Bold</span>
-            <span>Hesitant</span>
-          </div>
-        </div>
-
+          <img src="https://mindpowermy.github.io/vnca/logo.png" width="150">
+          <h1>VNCA Personality Assessment</h1>
+          <p>
+            Take this quick assessment to find out your dominant personality at work.
+            <br /><br />
+            Simply go through each page of questions where you will compare two characteristics.
+            <br /><br />
+            The scale is from left to right, so slide to where you feel fits you best at work.
+            <br /><br />
+            There are no right or wrong; good or bad answers. Answer with the first instinct that comes to mind.
+          </p>
         <div class="nav-buttons">
           <span></span>
-          <button type="button" onclick="showPage(2)">Next &raquo;</button>
+          <button type="button" onclick="showPage(2)">Start Assessment &raquo;</button>
         </div>
       </div>
 
-      <!-- Page 2 -->
+      <!-- Page 2: First set of questions (Q1..Q10) -->
       <div class="page" id="page2">
-        <h2>Page 2 of 3</h2>
+        <h2>Page 1 of Questions</h2>
+        <form id="questionnaire-form">
+          <!-- Original 4 questions at the front -->
+          <div class="form-group">
+            <label for="question1">Question 1: <strong>Take Charge</strong> vs <strong>Go Along</strong></label>
+            <div class="description"><strong>Take Charge:</strong> Leads and directs group efforts. <br><strong>Go Along:</strong> Adapts to group's direction and flow.</div>
+            <input type="range" id="question1" min="1" max="4" step="1" value="2">
+            <div class="scale-labels">
+              <span>Take Charge</span>
+              <span>Go Along</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="question2">Question 2: <strong>Dominant</strong> vs <strong>Submission</strong></label>
+            <div class="description"><strong>Dominant:</strong> Exerts authority to shape outcomes. <br><strong>Submission:</strong> Complies with requests and avoids control.</div>
+            <input type="range" id="question2" min="1" max="4" step="1" value="2">
+            <div class="scale-labels">
+              <span>Dominant</span>
+              <span>Submission</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="question3">Question 3: <strong>Spontaneous</strong> vs <strong>Disciplined</strong></label>
+            <div class="description"><strong>Spontaneous:</strong> Acts on the spur of the moment, flexible. <br><strong>Disciplined:</strong> Maintains structure and self-control.</div>
+            <input type="range" id="question3" min="1" max="4" step="1" value="2">
+            <div class="scale-labels">
+              <span>Spontaneous</span>
+              <span>Disciplined</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="question4">Question 4: <strong>Playful</strong> vs <strong>Stiff</strong></label>
+            <div class="description"><strong>Playful:</strong> Light-hearted, enjoys humor at work. <br><strong>Stiff:</strong> Prefers formality and seriousness.</div>
+            <input type="range" id="question4" min="1" max="4" step="1" value="2">
+            <div class="scale-labels">
+              <span>Playful</span>
+              <span>Stiff</span>
+            </div>
+          </div>
+
+          <!-- Next 6 from the new list to total 10 on page 2 -->
+          <div class="form-group">
+            <label for="question5">Question 5: <strong>Leader</strong> vs <strong>Follower</strong></label>
+            <div class="description"><strong>Leader:</strong> Takes charge, setting direction and inspiring others. <br><strong>Follower:</strong> Prefers guidance and supports team objectives.</div>
+            <input type="range" id="question5" min="1" max="4" step="1" value="2">
+            <div class="scale-labels">
+              <span>Leader</span>
+              <span>Follower</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="question6">Question 6: <strong>Assertive</strong> vs <strong>Passive</strong></label>
+            <div class="description"><strong>Assertive:</strong> Stands firm, expresses opinions confidently. <br><strong>Passive:</strong> Prefers avoiding confrontation and defers to others.</div>
+            <input type="range" id="question6" min="1" max="4" step="1" value="2">
+            <div class="scale-labels">
+              <span>Assertive</span>
+              <span>Passive</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="question7">Question 7: <strong>Matter-of-fact</strong> vs <strong>Dramatic</strong></label>
+            <div class="description"><strong>Matter-of-fact:</strong> Focuses on facts with minimal emotional expression. <br><strong>Dramatic:</strong> Expressive and uses emotions to emphasize points.</div>
+            <input type="range" id="question7" min="1" max="4" step="1" value="2">
+            <div class="scale-labels">
+              <span>Matter-of-fact</span>
+              <span>Dramatic</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="question8">Question 8: <strong>Methodical</strong> vs <strong>Impulsive</strong></label>
+            <div class="description"><strong>Methodical:</strong> Plans carefully and follows processes. <br><strong>Impulsive:</strong> Prefers spontaneity and rapid decisions.</div>
+            <input type="range" id="question8" min="1" max="4" step="1" value="2">
+            <div class="scale-labels">
+              <span>Methodical</span>
+              <span>Impulsive</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="question9">Question 9: <strong>Driving</strong> vs <strong>Coasting</strong></label>
+            <div class="description"><strong>Driving:</strong> Pushes for results aggressively. <br><strong>Coasting:</strong> Takes a relaxed approach, content with steady progress.</div>
+            <input type="range" id="question9" min="1" max="4" step="1" value="2">
+            <div class="scale-labels">
+              <span>Driving</span>
+              <span>Coasting</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="question10">Question 10: <strong>Bold</strong> vs <strong>Hesitant</strong></label>
+            <div class="description"><strong>Bold:</strong> Takes risks and pursues challenging goals. <br><strong>Hesitant:</strong> Prefers caution and thorough consideration.</div>
+            <input type="range" id="question10" min="1" max="4" step="1" value="2">
+            <div class="scale-labels">
+              <span>Bold</span>
+              <span>Hesitant</span>
+            </div>
+          </div>
+        </form>
+        <div class="nav-buttons">
+          <button type="button" onclick="showPage(1)">&laquo; Back</button>
+          <button type="button" onclick="showPage(3)">Next &raquo;</button>
+        </div>
+      </div>
+
+      <!-- Page 3: Next 10 questions (Q11..Q20) -->
+      <div class="page" id="page3">
+        <h2>Page 2 of Questions</h2>
         <div class="form-group">
           <label for="question11">Question 11: <strong>Outgoing</strong> vs <strong>Ingrown</strong></label>
           <div class="description"><strong>Outgoing:</strong> Social, enjoys interaction at work. <br><strong>Ingrown:</strong> Prefers solitude or smaller close-knit circles.</div>
@@ -287,16 +298,15 @@
             <span>Doing</span>
           </div>
         </div>
-
         <div class="nav-buttons">
-          <button type="button" onclick="showPage(1)">&laquo; Previous</button>
-          <button type="button" onclick="showPage(3)">Next &raquo;</button>
+          <button type="button" onclick="showPage(2)">&laquo; Back</button>
+          <button type="button" onclick="showPage(4)">Next &raquo;</button>
         </div>
       </div>
 
-      <!-- Page 3 -->
-      <div class="page" id="page3">
-        <h2>Page 3 of 3</h2>
+      <!-- Page 4: Final 12 questions (Q21..Q32) -->
+      <div class="page" id="page4">
+        <h2>Page 3 of Questions</h2>
         <div class="form-group">
           <label for="question21">Question 21: <strong>Intense</strong> vs <strong>Mild</strong></label>
           <div class="description"><strong>Intense:</strong> High-energy, passionate style. <br><strong>Mild:</strong> Calm, even-keeled approach.</div>
@@ -405,9 +415,8 @@
             <span>Structured</span>
           </div>
         </div>
-
         <div class="nav-buttons">
-          <button type="button" onclick="showPage(2)">&laquo; Previous</button>
+          <button type="button" onclick="showPage(3)">&laquo; Back</button>
           <button type="button" onclick="calculateResults()">Calculate</button>
         </div>
       </div>
@@ -416,50 +425,63 @@
       <div id="results-page">
         <h2>Your Personality Graph</h2>
         <canvas id="results-chart" width="400" height="400"></canvas>
+        <div class="results-buttons">
+          <button type="button" onclick="redoAssessment()">Redo Assessment</button>
+          <button type="button" onclick="window.location.href='#'">Get Report</button>
+        </div>
       </div>
+
     </div>
     <script>
       let currentPage = 1;
-      const totalPages = 3;
+      const totalPages = 4; // because we have introduction + 3 pages of questions
 
       function showPage(pageNum) {
         // Hide all pages
         for (let i = 1; i <= totalPages; i++) {
-          document.getElementById(`page${i}`).classList.remove('active');
+          const p = document.getElementById(`page${i}`);
+          if (p) p.classList.remove('active');
         }
         // Show the requested page
-        document.getElementById(`page${pageNum}`).classList.add('active');
+        const pageToShow = document.getElementById(`page${pageNum}`);
+        if (pageToShow) {
+          pageToShow.classList.add('active');
+        }
         currentPage = pageNum;
+        // Scroll to top
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
       function calculateResults() {
-        // Example logic: sum up odd-indexed questions for X, even-indexed for Y.
+        // Summation: odd-indexed => x, even-indexed => y.
         let xSum = 0;
         let ySum = 0;
         for (let i = 1; i <= 32; i++) {
           const val = parseFloat(document.getElementById(`question${i}`).value);
           if (i % 2 === 1) {
-            xSum += val; // odd => x
+            xSum += val;
           } else {
-            ySum += val; // even => y
+            ySum += val;
           }
         }
 
-        // Show the results page
+        // Hide all pages
         for (let i = 1; i <= totalPages; i++) {
-          document.getElementById(`page${i}`).classList.remove('active');
+          const p = document.getElementById(`page${i}`);
+          if (p) p.classList.remove('active');
         }
+        // Show the results page
         document.getElementById('results-page').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
 
         // If there's an existing chart, destroy it
         if (window.myChart) {
           window.myChart.destroy();
         }
+
         const ctx = document.getElementById('results-chart').getContext('2d');
 
-        // For a total of 32 questions, each 1-4, each sum can range from 16..64.
-        // We'll place the quadrant lines at 40 (midpoint), with min=16, max=64.
+        // We invert the Y-axis but keep the same quadrant arrangement.
 
         window.myChart = new Chart(ctx, {
           type: 'scatter',
@@ -478,40 +500,42 @@
             plugins: {
               annotation: {
                 annotations: {
-                  // Quadrant backgrounds
                   quadrantBox1: {
+                    // top-left
                     type: 'box',
                     xMin: 16,
                     xMax: 40,
-                    yMin: 40,
-                    yMax: 64,
-                    backgroundColor: 'rgba(255, 0, 0, 0.2)', // light red
+                    yMin: 16,
+                    yMax: 40,
+                    backgroundColor: 'rgba(255, 255, 0, 0.2)',
                   },
                   quadrantBox2: {
+                    // top-right
+                    type: 'box',
+                    xMin: 40,
+                    xMax: 64,
+                    yMin: 16,
+                    yMax: 40,
+                    backgroundColor: 'rgba(0, 255, 0, 0.2)',
+                  },
+                  quadrantBox3: {
+                    // bottom-left
+                    type: 'box',
+                    xMin: 16,
+                    xMax: 40,
+                    yMin: 40,
+                    yMax: 64,
+                    backgroundColor: 'rgba(255, 0, 0, 0.2)',
+                  },
+                  quadrantBox4: {
+                    // bottom-right
                     type: 'box',
                     xMin: 40,
                     xMax: 64,
                     yMin: 40,
                     yMax: 64,
-                    backgroundColor: 'rgba(0, 0, 255, 0.2)', // light blue
+                    backgroundColor: 'rgba(0, 0, 255, 0.2)',
                   },
-                  quadrantBox3: {
-                    type: 'box',
-                    xMin: 16,
-                    xMax: 40,
-                    yMin: 16,
-                    yMax: 40,
-                    backgroundColor: 'rgba(255, 255, 0, 0.2)', // light yellow
-                  },
-                  quadrantBox4: {
-                    type: 'box',
-                    xMin: 40,
-                    xMax: 64,
-                    yMin: 16,
-                    yMax: 40,
-                    backgroundColor: 'rgba(0, 255, 0, 0.2)', // light green
-                  },
-                  // Quadrant labels
                   quadrantLabel1: {
                     type: 'label',
                     xValue: 28,
@@ -524,7 +548,7 @@
                     type: 'label',
                     xValue: 52,
                     yValue: 28,
-                    content: ['Nurturer'],	
+                    content: ['Nurturer'],
                     color: '#000',
                     font: { size: 14, weight: 'bold' },
                   },
@@ -544,7 +568,6 @@
                     color: '#000',
                     font: { size: 14, weight: 'bold' },
                   },
-                  // Bold lines dividing quadrants
                   middleLineX: {
                     type: 'line',
                     xMin: 40,
@@ -570,12 +593,12 @@
               x: {
                 title: {
                   display: true,
-                  text: 'TASK ORIENTED	',
+                  text: 'TASK ORIENTED',
                 },
                 min: 16,
                 max: 64,
                 ticks: {
-                  stepSize: 2,
+                  stepSize: 4,
                 },
               },
               y: {
@@ -587,12 +610,23 @@
                 max: 64,
                 reverse: true,
                 ticks: {
-                  stepSize: 2,
+                  stepSize: 4,
                 },
               },
             },
           },
         });
+      }
+
+      function redoAssessment() {
+        // Reset all question values
+        for (let i = 1; i <= 32; i++) {
+          document.getElementById(`question${i}`).value = 2;
+        }
+        // Hide results page
+        document.getElementById('results-page').style.display = 'none';
+        // Show page 1
+        showPage(1);
       }
 
       // Initialize page 1 as active
