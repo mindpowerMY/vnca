@@ -430,6 +430,7 @@
         // Show the requested page
         document.getElementById(`page${pageNum}`).classList.add('active');
         currentPage = pageNum;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
       function calculateResults() {
